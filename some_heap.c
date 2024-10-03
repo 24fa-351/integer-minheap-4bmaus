@@ -121,3 +121,10 @@ heap_value_t heap_remove_min(heap_t *heap) {
 
     return min;
 }
+
+void heap_print_to_file(heap_t *heap, FILE *output) {
+    for (int ix = 0; ix < heap_size(heap); ix++) {
+        fprintf(output, "%3d - %3d : " HEAP_KEY_FORMAT "\n", heap_level(ix), ix, heap->data[ix].key);
+    }
+    fprintf(output, "\n");
+}
