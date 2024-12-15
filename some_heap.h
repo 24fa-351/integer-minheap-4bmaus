@@ -3,18 +3,18 @@
 
 // Min heap definitions
 typedef unsigned long long heap_key_t;
-typedef void* heap_value_t;
+typedef void *heap_value_t;
 #define HEAP_KEY_FORMAT "%llu"
 
 typedef struct {
-    heap_key_t key;
-    heap_value_t value;
+  heap_key_t key;
+  heap_value_t value;
 } heap_node_t;
 
 typedef struct {
-    heap_node_t *data;
-    int size;
-    int capacity;
+  heap_node_t *data;
+  int size;
+  int capacity;
 } heap_t;
 
 // Function declarations
